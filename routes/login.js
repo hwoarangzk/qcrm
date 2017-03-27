@@ -18,12 +18,12 @@ router.get('/', function(req, res, next) {
 /* GET users listing. */
 router.post('/', function(req, res, next) {
 
-	var name = req.body.name,
+	var account = req.body.account,
 		pwd = req.body.pwd;
 
 	Staff.find({
 		where: {
-			name: name,
+			account: account,
 			pwd: pwd
 		}
 	}).then(function(staff) {

@@ -14,6 +14,10 @@ var Staff = sequelize.define('staff', {
 	},
 	name: {
 		type: S.STRING,
+		allowNull: false
+	},
+	account: {
+		type: S.INTEGER,
 		allowNull: false,
 		unique: true
 	},

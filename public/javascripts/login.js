@@ -9,10 +9,10 @@ $(document).ready(function() {
 	//防止重复点击
 	var isLogin = false;
 
-	function validate(name, pwd) {
+	function validate(account, pwd) {
 
-		if (name === '') {
-			tip('fail', '请输入账户名');
+		if (account === '') {
+			tip('fail', '请输入账号');
 			return false;
 		}
 
@@ -26,10 +26,10 @@ $(document).ready(function() {
 
 	$('#login').click(function() {
 		
-		var name = $.trim($('#username').val()),
+		var account = $.trim($('#account').val()),
 			pwd = $.trim($('#pwd').val());
 
-		if (!validate(name, pwd)) {
+		if (!validate(account, pwd)) {
 			return;
 		}
 
@@ -43,7 +43,7 @@ $(document).ready(function() {
 			url: '/login',
 			type: 'post',
 			data: {
-				name: name,
+				account: account,
 				pwd: pwd
 			},
 			success: function(r) {
