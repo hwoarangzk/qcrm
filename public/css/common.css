@@ -45,7 +45,7 @@ a:hover {
   display: inline-block;
   *zoom: 1;
   *display: inline;
-  text-align: right;
+  text-align: left;
   margin-right: 10px;
 }
 .row {

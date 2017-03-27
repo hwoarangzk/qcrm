@@ -25,16 +25,18 @@ router.post('/', function(req, res, next) {
 		where: {
 			account: account,
 			pwd: pwd
-		}
+		},
+		raw: true
 	}).then(function(staff) {
 		if (staff) {
+			console.log(staff);
 			res.json({
 				r: 0
 			});
 		} else {
 			res.json({
 				r: 1,
-				msg: '用户不存在'
+				msg: '账号或密码错误'
 			});
 		}
 	}).catch(function() {

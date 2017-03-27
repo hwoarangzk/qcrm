@@ -9,11 +9,14 @@ module.exports = {
 	session: {
 		secret: 'qcrm',
 		name: 'sessionid',
-		maxAge: 1000 * 60 * 30
+		//会话保持时间
+		maxAge: 1000 * 60 * 5
 	},
 	db: {
 		name: 'qcrm',
 		user: 'root',
-		pwd: 'root'
+		pwd: 'root',
+		host: 'localhost',
+		port: 3306
 	}
 };

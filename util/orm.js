@@ -8,8 +8,8 @@ var Sequelize = require('sequelize'),
 	db = conf.db,
 	sequelize = new Sequelize(db.name, db.user, db.pwd, {
 		dialect: 'mysql',
-		host: 'localhost',
-		port: 3306,
+		host: db.host,
+		port: db.port,
 		define: {
 			//不要自动添加createdAt, updatedAt
 			timestamps: false
