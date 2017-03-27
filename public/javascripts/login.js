@@ -47,9 +47,10 @@ $(document).ready(function() {
 				pwd: pwd
 			},
 			success: function(r) {
-				if (r !== 0) {
+				if (!r || r.r !== 0) {
 					return tip('fail', r.msg);
 				}
+				location.href = '/';
 			},
 			fail: function(err) {
 				log(err);

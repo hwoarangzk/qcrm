@@ -28,7 +28,9 @@ router.post('/', function(req, res, next) {
 		}
 	}).then(function(staff) {
 		if (staff) {
-			res.redirect('/users');
+			res.json({
+				r: 0
+			});
 		} else {
 			res.json({
 				r: 1,
