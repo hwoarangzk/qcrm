@@ -77,3 +77,20 @@ a:hover {
 .btn:hover {
   background: #197dff;
 }
+.top-tip {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  border-radius: 4px;
+  color: #fff;
+  width: 200px;
+  height: 20px;
+  padding: 10px 15px;
+  text-align: center;
+}
+.top-tip.success {
+  background: green;
+}
+.top-tip.fail {
+  background: red;
+}

@@ -10,5 +10,10 @@ module.exports = {
 		secret: 'qcrm',
 		name: 'sessionid',
 		maxAge: 1000 * 60 * 30
+	},
+	db: {
+		name: 'qcrm',
+		user: 'root',
+		pwd: 'root'
 	}
 };

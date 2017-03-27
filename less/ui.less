@@ -8,6 +8,7 @@
 
 @import './base';
 
+//按钮
 .btn {
 	.dib();
 	min-width: 100px;
@@ -22,5 +23,27 @@
 
 	&:hover {
 		background: #197dff;
+	}
+}
+
+//头部轻提示
+.top-tip {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	border-radius: 4px;
+	.c(#fff);
+	width: 200px;
+	height: 20px;
+	padding: 10px 15px;
+	.tc();
+	// .dn();
+
+	&.success {
+		background: green;
+	}
+
+	&.fail {
+		background: red;
 	}
 }
