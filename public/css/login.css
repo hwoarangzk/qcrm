@@ -1,0 +1,70 @@
+/**
+ * basic app style
+ * @author: vergilzhou
+ * @version: 1.0.0
+ * @date: 2017/03/27
+ *
+ */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'microsoft yahei';
+}
+a {
+  color: #0067ed;
+  text-decoration: none;
+  font-size: 14px;
+}
+a:hover {
+  color: #0056c7;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mt30 {
+  margin-top: 30px;
+}
+.mt40 {
+  margin-top: 40px;
+}
+.mt50 {
+  margin-top: 50px;
+}
+.label {
+  min-width: 50px;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  text-align: right;
+  margin-right: 10px;
+}
+.row {
+  margin-bottom: 10px;
+  position: relative;
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+}
+.container .app-title {
+  font-size: 48px;
+  margin-top: 140px;
+}
+.container .main-login {
+  position: relative;
+  width: 330px;
+  height: 150px;
+  margin: 0 auto;
+  padding: 20px 15px;
+  border: 1px solid #dadee7;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+.container .main-login .btn-login {
+  position: relative;
+  right: 25px;
+}

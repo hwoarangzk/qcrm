@@ -1,17 +1,46 @@
 module.exports = function(grunt) {
 
-	 grunt.initConfig({
-	 	
-	 	watch: {
-	 		less: {
-	 			files: 'less/**/*.less',
-	 			tasks: ['less']
-	 		}
-	 	},
+	grunt.initConfig({
+		
+		watch: {
+			less: {
+				files: 'less/*.less',
+				tasks: ['less:all']
+			},
 
-	 	less: {
+			options: {
+                livereload: true
+            }
+		},
 
-	 	}
-	 });
+		less: {
+			all: {
+				files: {
+					'public/css/base.css': 'less/base.less',
+					'public/css/ui.css': 'less/ui.less',
+					'public/css/common.css': 'less/common.less',
+					'public/css/login.css': 'less/login.less'
+				}
+			}
+		},
+
+		concurrent: {
+            dev: {
+                tasks: ['watch'],
+                options: {
+                    limit: 10,
+                    logConcurrentOutput: true
+                }
+            }
+        }
+
+	});
+
+	grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-concurrent');
+
+    grunt.registerTask('l', ['less:all']);
+    grunt.registerTask('dev', ['concurrent:dev']);
 
 };

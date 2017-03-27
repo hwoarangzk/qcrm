@@ -1,0 +1,79 @@
+/**
+ * basic app style
+ * @author: vergilzhou
+ * @version: 1.0.0
+ * @date: 2017/03/27
+ *
+ */
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'microsoft yahei';
+}
+
+.tc() {
+	text-align: center;
+}
+
+.tl() {
+	text-align: left;
+}
+
+.tr() {
+	text-align: right;
+}
+
+.dib() {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.rel() {
+	position: relative;
+}
+
+.abs() {
+	position: absolute;
+}
+
+.w(@w:100%) {
+	width: @w;
+}
+
+.h(@h:100%) {
+	height: @h;
+}
+
+.c(@c:100%) {
+	color: @c;
+}
+
+a {
+	.c(#0067ed);
+	text-decoration: none;
+	font-size: 14px;
+
+	&:hover {
+		.c(#0056c7);
+	}
+}
+
+.mt10 {margin-top: 10px;}
+.mt20 {margin-top: 20px;}
+.mt30 {margin-top: 30px;}
+.mt40 {margin-top: 40px;}
+.mt50 {margin-top: 50px;}
+
+.label {
+	min-width: 50px;
+	.dib();
+	.tr();
+	margin-right: 10px;
+}
+
+.row {
+	margin-bottom: 10px;
+	.rel();
+}

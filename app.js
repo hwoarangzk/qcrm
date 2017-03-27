@@ -6,6 +6,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var methodOverride = require('method-override');
+var conf = require('./conf/config');
+
+var validateLogin = require('./mws/validate_login');
+var watcher = require('./mws/watcher');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -20,14 +24,21 @@ app.set('view engine', 'ejs');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(methodOverride());
-app.use(session({
-	secret: 'qcrm',
-	resave: false,
-	saveUninitialized: false
-}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({
+    secret: conf.session.secret,
+    resave: true,
+    rolling: true,
+    saveUninitialized: true,
+    name: conf.session.name,
+    cookie: {
+        maxAge: conf.session.maxAge
+    }
+}));
+app.use(watcher);
+app.use(validateLogin());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);

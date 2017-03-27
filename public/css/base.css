@@ -1,0 +1,47 @@
+/**
+ * basic app style
+ * @author: vergilzhou
+ * @version: 1.0.0
+ * @date: 2017/03/27
+ *
+ */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'microsoft yahei';
+}
+a {
+  color: #0067ed;
+  text-decoration: none;
+  font-size: 14px;
+}
+a:hover {
+  color: #0056c7;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mt30 {
+  margin-top: 30px;
+}
+.mt40 {
+  margin-top: 40px;
+}
+.mt50 {
+  margin-top: 50px;
+}
+.label {
+  min-width: 50px;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  text-align: right;
+  margin-right: 10px;
+}
+.row {
+  margin-bottom: 10px;
+  position: relative;
+}
