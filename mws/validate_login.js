@@ -9,7 +9,7 @@
  module.exports = function(fn) {
  	
  	return function(req, res, next) {
- 		console.log('req.session.id:', req.session.id);
+ 		// console.log('req.session.id:', req.session.id);
  		next();
  	}
 

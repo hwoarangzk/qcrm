@@ -13,6 +13,7 @@ var watcher = require('./mws/watcher');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var login = require('./routes/login');
 
 var app = express();
 
@@ -23,9 +24,9 @@ app.set('view engine', 'ejs');
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
-app.use(methodOverride());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(methodOverride());
 app.use(cookieParser());
 app.use(session({
     secret: conf.session.secret,
@@ -37,11 +38,12 @@ app.use(session({
         maxAge: conf.session.maxAge
     }
 }));
-app.use(watcher);
+// app.use(watcher);
 app.use(validateLogin());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/login', login);
 app.use('/users', users);
 
 // catch 404 and forward to error handler

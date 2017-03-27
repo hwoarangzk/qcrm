@@ -45,6 +45,14 @@ a:hover {
   margin-bottom: 10px;
   position: relative;
 }
+.footer {
+  color: #66686c;
+  width: 100%;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+}
 .container {
   width: 1140px;
   margin: 0 auto;

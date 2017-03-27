@@ -4,11 +4,10 @@
         <title>登录</title>
         <link rel='stylesheet' href='/css/common.css' />
         <link rel='stylesheet' href='/css/login.css' />
-        <script type="text/javascript" src="javascripts/lib/jquery.min.js"></script>
     </head>
     <body>
         <div class="container">
-            <div class="app-title">CRM演示系统</div>
+            <div class="app-title">CRM管理系统</div>
             <div class="main-login">
                 <div class="row">
                     <span class="label">用户名</span>
@@ -23,6 +22,12 @@
                     <a href="javascript:void(0);" id="forgetPwd" class="forget-pwd">忘记密码</a>
                 </div>
             </div>
+            <%
+                include common/footer
+            %>
         </div>
+        <script type="text/javascript" src="javascripts/lib/jquery.min.js"></script>
+        <script type="text/javascript" src="javascripts/utils.js"></script>
+        <script type="text/javascript" src="javascripts/login.js"></script>
     </body>
 </html>
