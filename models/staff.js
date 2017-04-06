@@ -24,6 +24,20 @@ var Staff = sequelize.define('staff', {
 	pwd: {
 		type: S.STRING,
 		allowNull: false
+	},
+	phone: {
+		type: S.STRING
+	},
+	email: {
+		type: S.STRING
+	},
+	title: {
+		type: S.STRING,
+		allowNull: false
+	},
+	dept: {
+		type: S.STRING,
+		allowNull: false
 	}
 });
 
