@@ -61,9 +61,12 @@ a:hover {
   color: #fff;
 }
 .header .header-title {
-  font-size: 34px;
   position: relative;
   left: 50px;
+}
+.header .header-title a {
+  color: #fff;
+  font-size: 34px;
 }
 .header .header-logout {
   display: inline-block;
@@ -80,6 +83,31 @@ a:hover {
   position: relative;
   top: 5px;
   right: 5px;
+}
+.header .navs {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 357px;
+}
+.header .navs a {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  width: 100px;
+  height: 100px;
+  color: #7b8396;
+  font-size: 20px;
+}
+.header .navs a:hover {
+  color: #fff;
+  background: #151922;
 }
 .container {
   width: 1140px;

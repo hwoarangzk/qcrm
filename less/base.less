@@ -119,9 +119,14 @@ a {
 	.c(#fff);
 
 	.header-title {
-		font-size: 34px;
+		
 		.rel();
 		left: 50px;
+
+		a {
+			.c(#fff);
+			font-size: 34px;
+		}
 	}
 
 	.header-logout {
@@ -137,6 +142,30 @@ a {
 			.rel();
 			top: 5px;
 			right: 5px;
+		}
+	}
+
+	.navs {
+		.dib();
+		.vm();
+		.abs();
+		top: 0;
+		left: 357px;
+
+		a {
+			.pl(15px);
+			.pr(15px);
+			.tc();
+			.dib();
+			.w(100px);
+			.h(100px);
+			.c(#7b8396);
+			font-size: 20px;
+
+			&:hover {
+				.c(#fff);
+				.bg(#151922);
+			}
 		}
 	}
 }
