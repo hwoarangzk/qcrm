@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+	<head>
+		<title>CRM管理系统</title>
+		<link rel='stylesheet' href='/css/common.css' />
+		<link rel='stylesheet' href='/css/index.css' />
+	</head>
+	<body>
+		<%
+			include common/header
+		%>
+		<div class="container tl">
+			
+			<div class="greeting">
+				<p class="name">
+					<%
+						var name = typeof username !== 'undefined' ? username : '管理员';
+					%>
+					你好，<%= name %>!
+				</p>
+				<p class="welcome">欢迎进入CRM管理系统</p>
+			</div>
+
+		</div>
+	</body>
 </html>

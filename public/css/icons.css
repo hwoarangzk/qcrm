@@ -89,20 +89,11 @@ a:hover {
   left: 0;
   bottom: 20px;
 }
-.container .app-title {
-  font-size: 48px;
-  margin-top: 140px;
-}
-.container .main-login {
-  position: relative;
-  width: 330px;
-  height: 150px;
-  margin: 0 auto;
-  padding: 20px 15px;
-  border: 1px solid #dadee7;
-  border-radius: 4px;
-  margin-top: 30px;
-}
-.container .main-login .btn-login {
-  position: relative;
+.icon-logout {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  background: url('../images/logout.png') no-repeat;
+  width: 20px;
+  height: 20px;
 }

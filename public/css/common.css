@@ -52,6 +52,42 @@ a:hover {
   margin-bottom: 10px;
   position: relative;
 }
+.header {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  background: #1e2431;
+  color: #fff;
+}
+.header .header-title {
+  font-size: 34px;
+  position: relative;
+  left: 50px;
+}
+.header .header-logout {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  width: 70px;
+  cursor: pointer;
+  float: right;
+  margin-right: 50px;
+  color: #fff;
+  font-size: 16px;
+}
+.header .header-logout .icon {
+  position: relative;
+  top: 5px;
+  right: 5px;
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+}
+.container.tl {
+  text-align: left;
+}
 .footer {
   color: #66686c;
   width: 100%;
@@ -93,4 +129,12 @@ a:hover {
 }
 .top-tip.fail {
   background: red;
+}
+.icon-logout {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  background: url('../images/logout.png') no-repeat;
+  width: 20px;
+  height: 20px;
 }

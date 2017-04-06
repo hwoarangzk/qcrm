@@ -25,11 +25,12 @@ router.post('/', function(req, res, next) {
 		where: {
 			account: account,
 			pwd: pwd
-		},
-		raw: true
+		}
 	}).then(function(staff) {
 		if (staff) {
-			console.log(staff);
+			console.log(staff.get({
+				plain: true
+			}));
 			res.json({
 				r: 0
 			});

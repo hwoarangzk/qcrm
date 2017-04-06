@@ -18,8 +18,10 @@ module.exports = function(grunt) {
 				files: {
 					'public/css/base.css': 'less/base.less',
 					'public/css/ui.css': 'less/ui.less',
+					'public/css/icons.css': 'less/icons.less',
 					'public/css/common.css': 'less/common.less',
-					'public/css/login.css': 'less/login.less'
+					'public/css/login.css': 'less/login.less',
+					'public/css/index.css': 'less/index.less',
 				}
 			}
 		},
